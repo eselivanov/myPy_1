@@ -3,7 +3,7 @@ def buildConnectionString(params):
 
     Returns string."""
 
-    # contruct sting from the dictionary of parametrs
+    # contruct string from the dictionary of parametrs
     return ";".join(["%s=%s" % (k, v) for k, v in params.items()])
 
 
