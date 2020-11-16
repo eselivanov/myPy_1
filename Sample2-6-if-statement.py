@@ -6,5 +6,5 @@ def fib(n):
         print( 'end of line' )
         return( 1 )
 #-----
-print(fib(3))
+print("fib()3: ", fib(3))
 
