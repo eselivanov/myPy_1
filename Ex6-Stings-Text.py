@@ -20,4 +20,4 @@ w = "This is the left side of ..."
 e = "a sting with a right side."
 
 print(w + e)
-print("."*10)
+print("."*14)
