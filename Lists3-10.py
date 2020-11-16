@@ -1,9 +1,9 @@
 li = ["a", "b", "mpilgrim", "z", "example"]
-print( li )
-print( li[0] )
-print( li[1] )
-print( li[-1] )
-print( li[-2] )
+print("List \"li\"", li)
+print("li[0]: ", li[0])
+print("li[1]: ", li[1])
+print("li[-1]: ", li[-1]) # example
+print("li[-2]: ", li[-2]) # z
 
 # it's all about where to start counting from
 print( li[-1] == li[len(li) - 1] )
@@ -34,6 +34,7 @@ li = ['a', 'b', 'c']
 li.append(['d', 'e', 'f'])   # 2nd list added a an element of the 1st one
 print( li, "of", len(li), "elements" )
 
+
 # Searching a List
 li = ['a', 'b', 'new', 'mpilgrim', 'z', 'example', 'new', 'two', 'elements']
 print( li.index("example") )  # get index of the element, 0-based
@@ -44,7 +45,7 @@ print( "example" in li ) # True
 # Boolean
 print( "Boolean: " )
 i = 0
-print( i, "=False, ", i == Falsen )  # True
+print( i, "=False, ", i == False )  # True
 
 s = ""
 print( s, "=False, ", s == False ) # False
@@ -56,40 +57,40 @@ d = {}
 print( d, "=False, ", d == False ) # False 
 
 t = ()
-print( t, "=False, ", t == False # False )
-
+print( t, "=False, ", t == False ) # False 
 
 # Removing Elements from a List
-#i = ['a', 'b', 'new', 'mpilgrim', 'z', 'example', 'new', 'two', 'elements']
-#print( li )
-#li.remove("z")
-#li.remove("new") # removes 1st occurrence of 'new'
-#print( li )
+i = ['a', 'b', 'new', 'mpilgrim', 'z', 'example', 'new', 'two', 'elements']
+print( li )
+li.remove("z")
+li.remove("new") # removes 1st occurrence of 'new'
+print( li )
 
-#print( li.pop() )  # removes last element, returns value of it
-#print( li )        # new list from original with last element removed
+print( li.pop() )  # removes last element, returns value of it
+print( li )        # new list from original with last element removed
                 # .remove() returns None
 
 # List Operators
-#li = ['a', 'b', 'mpilgrim']
-#li = li + ['example', 'new']  # almost the same as extend, it concatenates lists, but creates new vs. change old list
+li = ['a', 'b', 'mpilgrim']
+li = li + ['example', 'new']  # almost the same as extend, it concatenates lists, but creates new vs. change old list
 
-#print( li )
-#li += ['two'] # concatenate: li + 'two'
-#print( li )
+print( li )
+li += ['two'] # concatenate: li + 'two'
+print( li )
 
-#li = [1, 2] * 3     # means repeat [1, 2] x3 times, concatenated
+
+li = [1, 2] * 3     # means repeat [1, 2] x3 times, concatenated
                     # same as [1, 2] + [1, 2] + [1, 2]
-#print( li )
+print( "li = [1, 2] * 3  : ", li, "\n" )
 
  # Tuple is an immutable list, can not be changed in any way once it is created
  # tuples have no methods, no index, , no add, no remove, no clear etc.
- # but tuples are way faster, whirite-protected compare to lists ,
+ # but tuples are way faster, whrite-protected compare to lists ,
  # can be use as a key of a dictionary (except for tuple of lists)
  # used on string formating
 
  # can be converted to list and vice versa - use function tuple
 
-#t = ("a", "b", "mpilgrim", "z", "example")
-#print( t )
-#print( t[0], t[-1], t[1:3] )
+t = ("a", "b", "mpilgrim", "z", "example")
+print( t )
+print( t[0], t[-1], t[1:3] )
