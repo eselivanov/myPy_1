@@ -21,3 +21,7 @@ e = "a sting with a right side."
 
 print(w + e)
 print("."*14)
+
+formater = "%r %r %r %r"
+print( formater % (1, 2, 3, 4) )
+print( formater % ("str1", "str2", "str3", "str4"))
