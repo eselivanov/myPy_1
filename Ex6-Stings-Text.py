@@ -25,3 +25,11 @@ print("."*14)
 formater = "%r %r %r %r"
 print( formater % (1, 2, 3, 4) )
 print( formater % ("str1", "str2", "str3", "str4"))
+
+print( """
+print long 
+sting in triple 
+quouts
+""" )
+
+
