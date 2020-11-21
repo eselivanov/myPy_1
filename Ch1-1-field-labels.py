@@ -1,5 +1,6 @@
 #Ch1-1-fieldlabels.py
 NAME, AGE, PAY = range(3)   # 0..2
+print(NAME, AGE, PAY)
 
 bob = ['Bob Smith', 42, 10000]
 print(bob[NAME])
@@ -42,3 +43,4 @@ sue['pay'] = 40000
 sue['job'] = 'hdw'
 sue
 print( sue )
+
