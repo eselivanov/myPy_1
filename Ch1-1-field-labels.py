@@ -44,3 +44,15 @@ sue['job'] = 'hdw'
 sue
 print( sue )
 
+# -or-
+names = [ 'name','age', 'pay', 'job']
+values = [ 'Sue Jones', 45, 40000, 'hdw']
+
+list(zip(names, values)) 
+sue = dict(zip(names, values))
+sue
+
+# -or-
+fields = ( 'name', 'age', 'job', 'pay')
+record = dict.fromkeys( fields, '?')
+record
