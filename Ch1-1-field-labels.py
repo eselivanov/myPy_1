@@ -50,9 +50,44 @@ values = [ 'Sue Jones', 45, 40000, 'hdw']
 
 list(zip(names, values)) 
 sue = dict(zip(names, values))
-sue
 
 # -or-
 fields = ( 'name', 'age', 'job', 'pay')
-record = dict.fromkeys( fields, '?')
-record
+record = dict.fromkeys( fields, 'placeholder')
+print(record)
+
+# list of dictionaties
+bob = {'name': 'Bob Smith', 'age': 42, 'pay': 30000, 'job': 'dev'}
+sue = {'name': 'Sue Jones', 'age': 45, 'pay': 40000, 'job': 'hdw'}
+people = [bob, sue]
+print( people)
+
+for person in people:
+    print( person['name'], person['pay'], sep= ', ' )
+
+for person in people:
+    if person['name'] == 'Sue Jones':
+        print(person['pay'])
+
+
+print( list(map(lambda x: x['name'], people))  )   # ['Bob Smith', 'Sue Jones']
+
+sum( person['pay'] for person in people)
+
+# (!) interesting 
+[ rec['name'] for rec in people if rec['age'] >=45 ]
+
+[ print(rec['age'] **2) if rec['age'] >= 45 else print(rec['age']) for rec in people ]
+
+G = ( rec['name'] for rec in people if rec['age'] >= 45)  # G - generator object
+print( next( G ) )  # Sue Jones
+
+G = ( (rec['age'] ** 2 if rec['age'] >= 45 else rec['age']) for rec in people )
+print( G.__next__() )  #42
+
+for person in people:
+    print( person['name'].split()[-1])
+    person['pay'] *= 1.10
+    print( person['pay'], '\n' )
+
+for person in people: print( person['pay'])
