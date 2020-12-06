@@ -12,4 +12,4 @@ x = [(person.name, person.pay) for person in people]
 print(x)   # [('Bob Smith', 0), ('Sue Jones', 40000)]
 
 [print(rec.name) for rec in people if rec.age >= 45]
-[(rec.age **2 if rec.age >=45 else rec.age) for rec in people]
+[print(rec.age **2 if rec.age >=45 else rec.age) for rec in people]
